@@ -5,7 +5,7 @@ public class FindCostApp {
 
     public static void main(String[] args) {
         Scanner kbd = new Scanner(System.in);
-        double price, tax;
+        double price, tax, finalPrice;
 
         // call the displayTitle method
         displayTitle();
@@ -18,10 +18,10 @@ public class FindCostApp {
         tax = kbd.nextDouble();
 
         // call the calculateFinalPrice method
-        price = calculateFinalPrice(price, tax);
+        finalPrice = calculateFinalPrice(price, tax);
 
         // call the displayPrice method
-        displayPrice(price);
+        displayPrice(finalPrice);
 
     }
 
@@ -32,7 +32,7 @@ public class FindCostApp {
         System.out.println("");
 
     }
-
+  
     // method to calculate final price after tax
     public static double calculateFinalPrice(double price, double tax) {
 
@@ -42,10 +42,10 @@ public class FindCostApp {
     }
 
     // method to display the final price
-    public static void displayPrice(double price) {
+    public static void displayPrice(double finalPrice) {
 
         // display the final price after tax
-        System.out.println("Cost after tax = " + price);
+        System.out.println("Cost after tax = " + finalPrice);
 
     }
 }
